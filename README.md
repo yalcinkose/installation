@@ -98,3 +98,28 @@ sudo yum update -y
 sudo amazon-linux-extras install ansible2
 
 ansible --version
+
+
+
+
+# Part 5 - Install PROMETHEUS on Amazon Linux 2 EC2 Instance #
+
+wget https://github.com/prometheus/prometheus/releases/download/v2.31.0-rc.0/prometheus-2.31.0-rc.0.linux-amd64.tar.gz
+
+## Extract and run it with the following command: 
+
+tar xvfz prometheus-*.tar.gz
+
+## Check the basic prometheus configuration with the following commands: 
+
+cd prometheus-*
+
+cat prometheus.yml
+
+## Start Prometheus: 
+
+./prometheus --config.file=prometheus.yml
+
+## Open the prometheus web UI from your browser:
+
+http://<public ip of the ec2>:9090
