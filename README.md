@@ -1,5 +1,5 @@
-# installation
-DevOps Tools Installation Commands
+# devops-tools-installation
+DevOps Tools Installation Commands For Amazon Linux EC2
 
 **First of all update the installed packages and package cache on your instance.**
 
