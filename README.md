@@ -15,7 +15,7 @@ sudo systemctl enable docker                                   ## Enable docker 
 
 sudo systemctl status docker                                   ## Check if the docker service is up and running.
 
-newgrp docker                                                  ## Normally, the user needs to re-login into bash shell for the group docker to be effective, 
+newgrp docker                                                 ## Normally, the user needs to re-login into bash shell for the group docker to be effective, 
                                                                   but newgrp command can be used activate docker group for ec2-user, not to re-login into bash shell. 
 
 
