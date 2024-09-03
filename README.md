@@ -1,11 +1,11 @@
 # devops-tools-installation
-DevOps Tools Installation Commands For Amazon Linux EC2
+DevOps Tools Installation Commands For Linux Instances
 
 **First of all update the installed packages and package cache on your instance.**
 
 sudo yum update -y
 
-# Part 1 - Install DOCKER on Amazon Linux 2 EC2 Instance #
+# Part 1 - Install DOCKER on Linux Instance #
 
 sudo amazon-linux-extras install docker -y                     ## Install docker.
 
@@ -16,7 +16,7 @@ sudo systemctl enable docker                                   ## Enable docker 
 sudo systemctl status docker                                   ## Check if the docker service is up and running.
 
 newgrp docker                                                 ## Normally, the user needs to re-login into bash shell for the group docker to be effective, 
-                                                                  but newgrp command can be used activate docker group for ec2-user, not to re-login into bash shell. 
+                                                                 but newgrp command can be used activate docker group for ec2-user, not to re-login into bash shell. 
 
 
 docker version                                                 ## Check the docker version without sudo.   
@@ -25,7 +25,7 @@ docker info                                                    ## Check the dock
 
 
 
-# Part 2 - Install TERRAFORM on Amazon Linux 2 EC2 Instance #
+# Part 2 - Install TERRAFORM on Linux Instance #
 
 sudo yum update -y                                            ## Always update the installed packages and package cache on your instance. 
 
@@ -44,7 +44,7 @@ terraform -help                                                     ## List Terr
 
 
 
-# Part 3 - Install JENKINS on Amazon Linux 2 EC2 Instance #
+# Part 3 - Install JENKINS on Linux Instance #
 
 sudo yum update -y                                                  ## Always update the installed packages and package cache on your instance.
 
@@ -83,15 +83,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword              ## Get the i
 
 
 
-# Part 4 - Install ANSIBLE on Amazon Linux 2 EC2 Instance #
-
-# Spin-up 3 Amazon Linux 2 instances and name them as:
-
-1- control node
-2- node1 ----> (SSH PORT 22, HTTP PORT 80)
-3- node2 ----> (SSH PORT 22, HTTP PORT 80)
-
-# Connect to the control node via SSH and run the following commands.
+# Part 4 - Install ANSIBLE on Linux Instance #
 
 sudo yum update -y
 
@@ -101,8 +93,7 @@ ansible --version
 
 
 
-
-# Part 5 - Install PROMETHEUS on Amazon Linux 2 EC2 Instance #
+# Part 5 - Install PROMETHEUS on Linux Instance #
 
 wget https://github.com/prometheus/prometheus/releases/download/v2.31.0-rc.0/prometheus-2.31.0-rc.0.linux-amd64.tar.gz
 
